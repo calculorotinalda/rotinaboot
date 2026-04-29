@@ -1,0 +1,6 @@
+{
+  "name": "RotinaBoot",
+  "description": "Uma utilidade web de alta fidelidade para simulação e planejamento de criação de drives USB inicializáveis, inspirada no Rufus.",
+  "requestFramePermissions": ["usb"],
+  "majorCapabilities": []
+}

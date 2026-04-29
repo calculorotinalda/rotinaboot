@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f0f0f0] text-gray-900 font-sans antialiased;
+  }
+
+  .dark body {
+    @apply bg-[#1a1a1a] text-gray-100;
+  }
+}
+
+@layer components {
+  .rufus-panel {
+    @apply bg-white dark:bg-[#252526] border border-gray-300 dark:border-gray-700 shadow-sm rounded-sm p-4;
+  }
+
+  .rufus-section-title {
+    @apply text-[11px] font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2 flex items-center gap-2;
+  }
+
+  .rufus-input {
+    @apply w-full bg-white dark:bg-[#3c3c3c] border border-gray-300 dark:border-gray-600 rounded-sm px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500;
+  }
+
+  .rufus-button {
+    @apply px-4 py-1.5 text-sm font-medium rounded-sm transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .rufus-button-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white shadow-sm;
+  }
+
+  .rufus-button-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 dark:bg-[#333333] dark:hover:bg-[#444444] text-gray-700 dark:text-gray-200;
+  }
+}
